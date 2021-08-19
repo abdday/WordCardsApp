@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.room.Room
+import com.abdullah.wordcards.DataBase.AppDataBase
 import com.abdullah.wordcards.R
 import com.abdullah.wordcards.databinding.FragmentDashboardBinding
 
@@ -25,15 +27,36 @@ class DashboardFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-                ViewModelProvider(this).get(DashboardViewModel::class.java)
+
+        dashboardViewModel  = ViewModelProvider(this).get(DashboardViewModel::class.java)
+
+      //  val Database = Room.databaseBuilder( requireContext(), AppDataBase::class.java , "CardDatabase").build()
+       // dashboardViewModel.db = Database.cardDao()
+
+
+        ///dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
+
+        val showBtnView = binding.dashBtnShow
+
+        val wordTextView = binding.dashTvWord
+
+
+
+        showBtnView.setOnClickListener(View.OnClickListener { dashboardViewModel.readData() })
+
+        dashboardViewModel._cards.observe(viewLifecycleOwner , {
+            wordTextView.text = it[0].word
+        })
+
+
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
+
         })
         return root
     }

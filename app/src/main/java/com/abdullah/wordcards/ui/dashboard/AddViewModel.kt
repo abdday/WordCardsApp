@@ -8,13 +8,10 @@ import com.abdullah.wordcards.DataBase.CardRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class AddViewModel(application: Application) : AndroidViewModel(application) {
+class AddViewModel() : ViewModel() {
 
-    private  var cardRepo =  CardRepo(application)
-    //private  val  db =  AppDataBase.getDatabase(application).cardDao()
-
-
-
+    val word : MutableLiveData<String> = MutableLiveData()
+    val tanslated : MutableLiveData<String> = MutableLiveData()
 
 
 }

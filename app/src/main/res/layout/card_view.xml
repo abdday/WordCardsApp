@@ -16,8 +16,6 @@ android:foreground="?android:attr/selectableItemBackground"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:background="@drawable/card_custom"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
         app:cardCornerRadius="5dp"
         app:cardElevation="15dp"
         app:contentPadding="3dp"
@@ -52,11 +50,13 @@ android:foreground="?android:attr/selectableItemBackground"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:gravity="center"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:visibility="invisible" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/buttons_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">

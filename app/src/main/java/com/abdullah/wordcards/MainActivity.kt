@@ -14,7 +14,6 @@ import java.time.OffsetDateTime
 
 class MainActivity : AppCompatActivity() {
 
-   /// private lateinit var binding: ActivityMainBinding
 
     private lateinit var binding : ActivityMainBinding
 
@@ -24,36 +23,14 @@ class MainActivity : AppCompatActivity() {
         binding  = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
-     ///   binding = ActivityMainBinding.inflate(layoutInflater)
-       /// setContentView(binding.root)
-
-        //val Database = Room.databaseBuilder(applicationContext , AppDataBase::class.java , "CardDatabase").build()
-       // val db = Database.cardDao()
-      //  db.insertNewCard(Card(5 , "Comprihensivly" , "majani" , Timestamp(System.nanoTime()) ))
 
 
-        val db = CardRepo(application)
-        db.addCard(Card(0, "ali", "alll", OffsetDateTime.now()))
 
-      /*
-        val db = AppDataBase.getDatabase(this).cardDao()
-
-        lifecycleScope.launch(Dispatchers.IO) {
-            db.insertNewCard(Card(0, "ali", "alll", OffsetDateTime.now()))
-
-        }
-        */
 
         val navView :BottomNavigationView = binding.navView
-        ///val navView: BottomNavigationView = binding.navView
-
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
 
-/*
-        val dbHelper = Room.databaseBuilder(applicationContext , AppDataBase::class.java , "cardDB").build()
 
-        val db = dbHelper.cardDao()
-*/
 
        // supportActionBar?.setDisplayShowHomeEnabled(true)
       //  supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -71,15 +48,10 @@ class MainActivity : AppCompatActivity() {
 
         navView.setupWithNavController(navController)
 
-        /* ///val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications))
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-   */
 
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return super.onSupportNavigateUp()
-    }
+//    override fun onSupportNavigateUp(): Boolean {
+//        return super.onSupportNavigateUp()
+//    }
 }

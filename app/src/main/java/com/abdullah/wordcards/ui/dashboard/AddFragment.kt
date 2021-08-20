@@ -5,10 +5,7 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.abdullah.wordcards.DataBase.Card
@@ -46,7 +43,11 @@ class AddFragment : Fragment() {
           bindViews()
           setOnAddBtnClicked()
 
-
+//            wordView.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->  addViewModel.tanslated.value = wordView.text.toString(); true })
+//
+        addViewModel.word.observe(viewLifecycleOwner , {
+            wordView.setText(it)
+        })
 
 
         return root
@@ -82,6 +83,8 @@ class AddFragment : Fragment() {
         wordView.setText("")
       TranslatedView.setText("")
          favoriteCheckboxView.isChecked =false
+        addViewModel.word.value = ""
+        addViewModel.tanslated.value = ""
     }
 
 
@@ -91,6 +94,12 @@ class AddFragment : Fragment() {
                 return false
 
         return true
+    }
+
+    override fun onStop() {
+        super.onStop()
+        addViewModel.word.value = wordView.text.toString()
+        addViewModel.tanslated.value = TranslatedView.text.toString()
     }
 
 

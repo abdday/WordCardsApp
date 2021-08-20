@@ -11,12 +11,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
 import com.abdullah.wordcards.DataBase.AppDataBase
 import com.abdullah.wordcards.R
-import com.abdullah.wordcards.databinding.FragmentDashboardBinding
+import com.abdullah.wordcards.databinding.FragmentAddBinding
 
 class DashboardFragment : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentAddBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -36,7 +36,7 @@ class DashboardFragment : Fragment() {
 
         ///dashboardViewModel = ViewModelProvider(this).get(DashboardViewModel::class.java)
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        _binding = FragmentAddBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
@@ -47,17 +47,8 @@ class DashboardFragment : Fragment() {
 
 
 
-        showBtnView.setOnClickListener(View.OnClickListener { dashboardViewModel.readData() })
-
-        dashboardViewModel._cards.observe(viewLifecycleOwner , {
-            wordTextView.text = it[0].word
-        })
 
 
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-
-        })
         return root
     }
 

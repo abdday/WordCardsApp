@@ -3,20 +3,13 @@ package com.abdullah.wordcards
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.room.Room
 import com.abdullah.wordcards.DataBase.Card
-import com.abdullah.wordcards.DataBase.AppDataBase
 import com.abdullah.wordcards.DataBase.CardRepo
-import com.abdullah.wordcards.DataBase.DataBaseHelper
 import com.abdullah.wordcards.databinding.ActivityMainBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import java.sql.Timestamp
 import java.time.OffsetDateTime
 
 class MainActivity : AppCompatActivity() {
@@ -62,8 +55,8 @@ class MainActivity : AppCompatActivity() {
         val db = dbHelper.cardDao()
 */
 
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+       // supportActionBar?.setDisplayShowHomeEnabled(true)
+      //  supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
 

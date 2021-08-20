@@ -10,6 +10,10 @@ interface CardDao {
     @Query("SELECT * FROM card")
     fun getAll() : LiveData<List<Card>>
 
+
+    @Query("SELECT * FROM card WHERE isFavorite = 1")
+    fun getAllFavorites() : LiveData<List<Card>>
+
     @Query("SELECT * FROM Card WHERE id = :id")
     fun getCard(id : Int) : Card
 

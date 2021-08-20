@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.abdullah.wordcards.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="com.abdullah.wordcards.ui.home.CardsFragment"
+        android:label="@string/title_cards"
+        tools:layout="@layout/fragment_cards" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.abdullah.wordcards.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:label="@string/title_add"
+        tools:layout="@layout/fragment_add" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.abdullah.wordcards.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="com.abdullah.wordcards.ui.notifications.FavoritesFragment"
+        android:label="@string/title_favorits"
+        tools:layout="@layout/fragment_favorites" />
 </navigation>

@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.35572916666666665" />
-        <entry key="app/src/main/res/layout/card_view.xml" value="0.196875" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.21197916666666666" />
+        <entry key="app/src/main/res/drawable/card_custom.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/card_view.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/fragment_cards.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.35572916666666665" />
       </map>
@@ -17,5 +22,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.43703703703703706" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -4,17 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.abdullah.wordcards.R
-import com.abdullah.wordcards.databinding.FragmentHomeBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.abdullah.wordcards.databinding.FragmentCardsBinding
+import com.abdullah.wordcards.ui.List.CardListAdapter
 
-class HomeFragment : Fragment() {
+class CardsFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
-    private var _binding: FragmentHomeBinding? = null
+    private lateinit var cardsViewModel: CardsViewModel
+    private var _binding: FragmentCardsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,16 +24,29 @@ class HomeFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
+        cardsViewModel =
+                ViewModelProvider(this).get(CardsViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentCardsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+
+        val RL_view = binding.lvCards
+
+        val myListAdapter =  CardListAdapter(CardListAdapter.CardDiff)
+        RL_view.adapter =  myListAdapter
+        RL_view.layoutManager = LinearLayoutManager(requireContext())
+
+        cardsViewModel._cards.observe(viewLifecycleOwner , {
+            myListAdapter.submitList(it)
+        })
+/*
         val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
+ */
         return root
     }
 
@@ -42,4 +54,6 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

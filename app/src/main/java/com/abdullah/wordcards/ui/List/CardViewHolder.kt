@@ -36,7 +36,6 @@ class CardViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     init {
         view.setOnClickListener({
-            Toast.makeText(view.context , "jaa clcieked" ,Toast.LENGTH_SHORT).show()
            //  val rotate =  RotateAnimation(0f , 180f,Animation.RELATIVE_TO_SELF , 0.5f , RELATIVE_TO_SELF ,0.5f)
          //   val rotate = AnimationUtils.loadAnimation( view.context,R.animator.card_filp_animator)
 

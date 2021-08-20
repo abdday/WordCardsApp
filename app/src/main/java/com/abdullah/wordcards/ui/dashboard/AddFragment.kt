@@ -45,9 +45,9 @@ class AddFragment : Fragment() {
 
 //            wordView.setOnKeyListener(View.OnKeyListener { v, keyCode, event ->  addViewModel.tanslated.value = wordView.text.toString(); true })
 //
-        addViewModel.word.observe(viewLifecycleOwner , {
-            wordView.setText(it)
-        })
+//        addViewModel.word.observe(viewLifecycleOwner , {
+//            wordView.setText(it)
+//        })
 
 
         return root
@@ -83,8 +83,8 @@ class AddFragment : Fragment() {
         wordView.setText("")
       TranslatedView.setText("")
          favoriteCheckboxView.isChecked =false
-        addViewModel.word.value = ""
-        addViewModel.tanslated.value = ""
+//        addViewModel.word.value = ""
+//        addViewModel.tanslated.value = ""
     }
 
 
@@ -98,8 +98,8 @@ class AddFragment : Fragment() {
 
     override fun onStop() {
         super.onStop()
-        addViewModel.word.value = wordView.text.toString()
-        addViewModel.tanslated.value = TranslatedView.text.toString()
+//        addViewModel.word.value = wordView.text.toString()
+//        addViewModel.tanslated.value = TranslatedView.text.toString()
     }
 
 

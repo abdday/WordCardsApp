@@ -3,4 +3,10 @@
     <string name="title_cards">Cards</string>
     <string name="title_add">Add</string>
     <string name="title_favorits">Favorites</string>
+    <string name="checkbox_favorite_title">is favorite</string>
+    <string name="add_btn_title">Add</string>
+    <string name="word_title">word/sentence</string>
+    <string name="translated_title">Translation</string>
+    <string name="add_error_meesage">please full all fields</string>
+    <string name="add_succecful_meesage">card added successfully</string>
 </resources>

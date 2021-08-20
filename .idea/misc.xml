@@ -7,7 +7,7 @@
         <entry key="app/src/main/res/drawable/card_custom.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/card_view.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.196875" />
+        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_cards.xml" value="0.196875" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_favorites.xml" value="0.196875" />

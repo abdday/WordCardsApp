@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.abdullah.wordcards.ui.dashboard.DashboardFragment"
+        android:name="com.abdullah.wordcards.ui.dashboard.AddFragment"
         android:label="@string/title_add"
         tools:layout="@layout/fragment_add" />
 

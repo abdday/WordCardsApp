@@ -8,7 +8,7 @@ import com.abdullah.wordcards.DataBase.CardRepo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class DashboardViewModel(application: Application) : AndroidViewModel(application) {
+class AddViewModel(application: Application) : AndroidViewModel(application) {
 
     private  var cardRepo =  CardRepo(application)
     //private  val  db =  AppDataBase.getDatabase(application).cardDao()
